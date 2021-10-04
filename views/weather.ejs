@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .weatherContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: blanchedalmond;
+       
+        
+      }
+      .temp{
+          color: darkblue;
+          font-size: larger;
+      }
+      .area{
+          color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weatherContainer">
+      <div class="area">
+        <h2>
+          <%= allData.location.name%>, <%= allData.location.region%>, <%=
+          allData.location.country%>
+        </h2>
+        <h3><%= allData.location.localtime%></h3>
+      </div>
+      <div class="temp"><h3><%= allData.current.temp_c%> C</h3><%= allData.current.temp_f%> F</h3></div>
+    </div>
+  </body>
+</html>
